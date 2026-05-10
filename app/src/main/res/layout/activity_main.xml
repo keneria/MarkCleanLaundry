@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFF">
+
+    <!-- Logo -->
+    <LinearLayout
+        android:id="@+id/logoSection"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- App Icon -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:src="@drawable/markclean_logo"
+            android:contentDescription="MailLaundry Logo"
+            android:scaleType="fitCenter" />
+
+        <!-- App Name -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/lexend_black"
+                android:letterSpacing="0.05"
+                android:text="MarkClean"
+                android:textColor="#1B3A5C"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Tagline -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:fontFamily="@font/lexend"
+            android:text="Quality Laundry Services You Can Trust"
+            android:textColor="#2C8FBD"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <!-- Bottom Button Section -->
+    <LinearLayout
+        android:id="@+id/buttonSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="80dp"
+        android:orientation="vertical"
+        android:paddingHorizontal="40dp"
+        android:gravity="center">
+
+        <!-- Sign In Button -->
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:backgroundTint="#1B3A5C"
+            android:fontFamily="@font/lexend_bold"
+            android:stateListAnimator="@null"
+            android:text="Sign In"
+            android:textColor="#FFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp" />
+
+        <!-- Create New Account Button -->
+        <Button
+            android:id="@+id/btnCreateAccount"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#00000000"
+            android:fontFamily="@font/lexend_bold"
+            android:stateListAnimator="@null"
+            android:text="Create New Account"
+            android:textColor="#2C8FBD"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:cornerRadius="30dp"
+            app:strokeColor="#2C8FBD"
+            app:strokeWidth="2dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
