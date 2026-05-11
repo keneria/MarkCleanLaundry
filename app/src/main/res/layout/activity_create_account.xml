@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="30dp"
+        android:paddingBottom="40dp">
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/markclean_logo"
+            android:layout_marginBottom="16dp"
+            android:scaleType="fitCenter"/>
+        <!-- Logo / Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MarkClean"
+            android:textSize="28sp"
+            android:textColor="#1B3A5C"
+            android:fontFamily="@font/lexend_bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Quality Laundry Services You Can Trust"
+            android:textSize="13sp"
+            android:textColor="#2C8FBD"
+            android:fontFamily="@font/lexend_medium"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="40dp"/>
+
+        <!-- Full Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            app:boxStrokeColor="#1B3A5C"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFullName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:fontFamily="@font/lexend_medium"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Username -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Username"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            app:boxStrokeColor="#1B3A5C"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etUsername"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textNoSuggestions"
+                android:fontFamily="@font/lexend_medium"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Phone Number"
+            android:layout_marginBottom="16dp"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            app:boxStrokeColor="#1B3A5C"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                android:fontFamily="@font/lexend_medium"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:layout_marginBottom="32dp"
+            app:boxCornerRadiusTopStart="50dp"
+            app:boxCornerRadiusTopEnd="50dp"
+            app:boxCornerRadiusBottomStart="50dp"
+            app:boxCornerRadiusBottomEnd="50dp"
+            app:boxStrokeColor="#1B3A5C"
+            app:passwordToggleEnabled="true"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:fontFamily="@font/lexend_medium"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Sign Up Button -->
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Sign Up"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:fontFamily="@font/lexend_bold"
+            android:backgroundTint="#2C8FBD"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- Go to Sign In -->
+        <Button
+            android:id="@+id/btnGoToSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Log In With Your Account"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:fontFamily="@font/lexend_bold"
+            android:backgroundTint="#1B3A5C"/>
+
+    </LinearLayout>
+</ScrollView>

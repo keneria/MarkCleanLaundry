@@ -1,0 +1,588 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        android:clipToPadding="false">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <!-- Top Bar -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:id="@+id/imgAvatar"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_launcher_foreground"
+                        android:background="#2C8FBD"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Avatar" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="10dp">
+
+                        <TextView
+                            android:id="@+id/tvGreetingName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hi, there"
+                            android:textColor="#1B3A5C"
+                            android:textSize="16sp"
+                            android:fontFamily="@font/lexend_bold" />
+
+                        <TextView
+                            android:id="@+id/tvWelcome"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Welcome!"
+                            android:textColor="#2C8FBD"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/lexend_medium" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- Search Bar -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:boxCornerRadiusTopStart="30dp"
+                app:boxCornerRadiusTopEnd="30dp"
+                app:boxCornerRadiusBottomStart="30dp"
+                app:boxCornerRadiusBottomEnd="30dp"
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxStrokeColor="@android:color/transparent"
+                app:boxStrokeWidth="0dp"
+                app:hintTextColor="#AAAAAA"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Search services"
+                    android:fontFamily="@font/lexend_medium"
+                    android:textSize="14sp"
+                    android:textColor="#1B3A5C"
+                    android:inputType="text" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Info Banner -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="#1B3A5C">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MarkClean Laundry Services"
+                        android:textColor="#FFFFFF"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/lexend_bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&#8220;Clean with Care&#8221;"
+                        android:textColor="#CCDDEE"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/lexend_medium"
+                        android:layout_marginTop="2dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ground floor MIM Bldg., 2993 Kakarong St. Brgy. Sta Cruz, Makati City"
+                        android:textColor="#CCDDEE"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/lexend_medium"
+                        android:layout_marginTop="6dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0981-306-5044 / 0966-453-3301"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/lexend_medium"
+                        android:layout_marginTop="4dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Open Daily: 7:00am - 7:00pm"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:fontFamily="@font/lexend_medium"
+                        android:layout_marginTop="4dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Our Services Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Our Services"
+                android:textColor="#2C8FBD"
+                android:textSize="18sp"
+                android:fontFamily="@font/lexend_bold"
+                android:layout_marginBottom="14dp" />
+
+            <!-- Row 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="12dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardWashFold"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/wash_fold"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Wash and Fold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wash &amp; Fold"
+                            android:textColor="#1B3A5C"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/lexend_bold"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Min 12 Hours"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardWashPress"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/wash_press"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Wash and Press" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wash &amp; Press"
+                            android:textColor="#1B3A5C"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/lexend_bold"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Min 6 Hours"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Row 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_marginBottom="24dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardPressOnly"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="6dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/press"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Press Only" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Press Only"
+                            android:textColor="#1B3A5C"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/lexend_bold"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Min 3 Hours"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardDryCleaning"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:layout_marginStart="6dp"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="2dp"
+                    app:cardBackgroundColor="#FFFFFF">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:src="@drawable/dry_cleaning"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Dry Cleaning" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dry Cleaning"
+                            android:textColor="#1B3A5C"
+                            android:textSize="13sp"
+                            android:fontFamily="@font/lexend_bold"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Min 24 Hours"
+                            android:textColor="#AAAAAA"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Other Services -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Other Services Offered"
+                android:textColor="#2C8FBD"
+                android:textSize="18sp"
+                android:fontFamily="@font/lexend_bold"
+                android:layout_marginBottom="14dp" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/chipSneaker"
+                        android:layout_width="90dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:layout_marginEnd="12dp"
+                        android:elevation="3dp"
+                        android:padding="10dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/shoes"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Sneaker Cleaning" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sneaker Cleaning"
+                            android:textColor="#1B3A5C"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chipBag"
+                        android:layout_width="90dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:layout_marginEnd="12dp"
+                        android:elevation="3dp"
+                        android:padding="10dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/bag"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Bag Cleaning" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Bag Cleaning"
+                            android:textColor="#1B3A5C"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chipSteam"
+                        android:layout_width="90dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:layout_marginEnd="12dp"
+                        android:elevation="3dp"
+                        android:padding="10dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/iron"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Press Steam" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Press/Steam"
+                            android:textColor="#1B3A5C"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chipHandWash"
+                        android:layout_width="90dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:layout_marginEnd="12dp"
+                        android:elevation="3dp"
+                        android:padding="10dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/hand"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Hand Wash" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hand Wash"
+                            android:textColor="#1B3A5C"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/chipCurtain"
+                        android:layout_width="90dp"
+                        android:layout_height="100dp"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:background="#FFFFFF"
+                        android:elevation="3dp"
+                        android:padding="10dp"
+                        android:foreground="?attr/selectableItemBackground"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="36dp"
+                            android:layout_height="36dp"
+                            android:src="@drawable/curtain"
+                            android:scaleType="fitCenter"
+                            android:contentDescription="Curtain Cleaning" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Curtain Cleaning"
+                            android:textColor="#1B3A5C"
+                            android:textSize="11sp"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginTop="6dp"
+                            android:gravity="center" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="#FFFFFF"
+        app:itemIconTint="#2C8FBD"
+        app:itemIconSize="28dp"
+        app:itemTextColor="#2C8FBD"
+        app:menu="@menu/bottom_nav_menu" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
