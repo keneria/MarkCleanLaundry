@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Edit Profile"
+        android:textColor="#1B3A5C"
+        android:textSize="18sp"
+        android:fontFamily="@font/lexend_bold"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Name Label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Full Name"
+        android:textColor="#888888"
+        android:textSize="11sp"
+        android:fontFamily="@font/lexend_medium"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Name Field -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#F5F5F5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/etEditName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/lexend_medium"
+            android:hint="Enter your name"
+            android:textColor="#1B3A5C"
+            android:textColorHint="#CCCCCC"
+            android:textSize="13sp"
+            android:inputType="textCapWords"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <!-- Phone Label -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textColor="#888888"
+        android:textSize="11sp"
+        android:fontFamily="@font/lexend_medium"
+        android:layout_marginBottom="6dp" />
+
+    <!-- Phone Field -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="#F5F5F5"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp"
+        android:layout_marginBottom="24dp">
+
+        <EditText
+            android:id="@+id/etEditPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:fontFamily="@font/lexend_medium"
+            android:hint="Enter your phone number"
+            android:textColor="#1B3A5C"
+            android:textColorHint="#CCCCCC"
+            android:textSize="13sp"
+            android:inputType="phone"
+            android:maxLines="1" />
+    </LinearLayout>
+
+    <!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancelEdit"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="6dp"
+            android:text="Cancel"
+            android:textColor="#1B3A5C"
+            android:textSize="13sp"
+            android:fontFamily="@font/lexend_bold"
+            app:backgroundTint="#F0F0F0"
+            app:cornerRadius="30dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveEdit"
+            android:layout_width="0dp"
+            android:layout_height="46dp"
+            android:layout_weight="1"
+            android:layout_marginStart="6dp"
+            android:text="Save"
+            android:textColor="#FFFFFF"
+            android:textSize="13sp"
+            android:fontFamily="@font/lexend_bold"
+            app:backgroundTint="#1B3A5C"
+            app:cornerRadius="30dp" />
+    </LinearLayout>
+
+</LinearLayout>

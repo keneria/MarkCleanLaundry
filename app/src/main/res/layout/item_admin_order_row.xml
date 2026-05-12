@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:orientation="horizontal"
+    android:paddingStart="12dp"
+    android:paddingEnd="12dp"
+    android:background="@drawable/row_selector">
+
+    <TextView
+        android:id="@+id/tvOrderId"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="#1B3A5C"
+        android:fontFamily="@font/lexend_bold"
+        android:textSize="12sp"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tvClientName"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center_vertical"
+        android:textColor="#333333"
+        android:fontFamily="@font/lexend_medium"
+        android:textSize="12sp"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tvPhone"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center_vertical"
+        android:textColor="#555555"
+        android:fontFamily="@font/lexend_medium"
+        android:textSize="11sp"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <!-- NEW: Service column (replaces tvOrderType) -->
+    <TextView
+        android:id="@+id/tvService"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.5"
+        android:gravity="center_vertical"
+        android:textColor="#555555"
+        android:fontFamily="@font/lexend_medium"
+        android:textSize="11sp"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <!-- NEW: Price column -->
+    <TextView
+        android:id="@+id/tvPrice"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="#2E7D32"
+        android:fontFamily="@font/lexend_medium"
+        android:textSize="11sp"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="#2C8FBD"
+        android:fontFamily="@font/lexend_medium"
+        android:textSize="11sp"
+        android:ellipsize="end"
+        android:maxLines="1"/>
+
+    <!-- Edit & Delete buttons -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginStart="6dp">
+
+        <Button
+            android:id="@+id/btnEditOrder"
+            android:layout_width="44dp"
+            android:layout_height="30dp"
+            android:text="Edit"
+            android:textSize="9sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1B3A5C"
+            android:padding="0dp"
+            android:layout_marginEnd="4dp"
+            android:fontFamily="@font/lexend_medium"/>
+
+        <Button
+            android:id="@+id/btnDeleteOrder"
+            android:layout_width="44dp"
+            android:layout_height="30dp"
+            android:text="Del"
+            android:textSize="9sp"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#E53935"
+            android:padding="0dp"
+            android:fontFamily="@font/lexend_medium"/>
+
+    </LinearLayout>
+
+</LinearLayout>
