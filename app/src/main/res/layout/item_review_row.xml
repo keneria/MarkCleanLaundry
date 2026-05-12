@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp">
+
+    <!-- Item name -->
+    <TextView
+        android:id="@+id/tvReviewItemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Item"
+        android:textColor="#1B3A5C"
+        android:textSize="13sp"
+        android:fontFamily="@font/lexend_bold"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
+
+    <!-- Qty (center) -->
+    <TextView
+        android:id="@+id/tvReviewItemQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1 piece"
+        android:textColor="#AAAAAA"
+        android:textSize="12sp"
+        android:fontFamily="@font/lexend_medium"
+        android:layout_centerInParent="true" />
+
+    <!-- Price (right) -->
+    <TextView
+        android:id="@+id/tvReviewItemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="₱ 0.00"
+        android:textColor="#2C8FBD"
+        android:textSize="13sp"
+        android:fontFamily="@font/lexend_bold"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
