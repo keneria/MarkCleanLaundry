@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="navy">#1B3A5C</color>
+
+    // order detail status colors
+    <color name="status_pending">#F59E0B</color>
+    <color name="status_confirmed">#22C55E</color>
+    <color name="status_washing">#2C8FBD</color>
+    <color name="status_delivery">#F97316</color>
+    <color name="status_delivered">#10B981</color>
+</resources>
