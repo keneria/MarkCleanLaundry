@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp"
+        android:paddingEnd="16dp"
+        android:background="#1B3A5C"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/ic_arrow_back"
+            android:background="@null"
+            android:tint="#FFFFFF"
+            android:contentDescription="Back"
+            android:layout_marginEnd="12dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Order Detail"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:fontFamily="@font/lexend_bold"
+            android:layout_marginStart="4dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="32dp">
+
+            <!-- 1. Order Header Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="6dp">
+
+                        <TextView
+                            android:id="@+id/tvAdminOrderNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Order #—"
+                            android:textSize="17sp"
+                            android:textColor="#1B3A5C"
+                            android:fontFamily="@font/lexend_bold"/>
+
+                        <TextView
+                            android:id="@+id/tvAdminStatusBadge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PENDING"
+                            android:textSize="10sp"
+                            android:textColor="#F4A423"
+                            android:fontFamily="@font/lexend_bold"
+                            android:background="#FFF3E0"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tvAdminOrderStatus"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pending"
+                        android:textSize="13sp"
+                        android:textColor="#F4A423"
+                        android:fontFamily="@font/lexend_medium"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 2. Weight and Price Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Weight &amp; Price"
+                        android:textSize="14sp"
+                        android:textColor="#1B3A5C"
+                        android:fontFamily="@font/lexend_bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvAdminWeightPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:textSize="15sp"
+                        android:textColor="#27AE60"
+                        android:fontFamily="@font/lexend_bold"
+                        android:layout_marginBottom="14dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSetWeightPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Set Weight &amp; Price"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/lexend_medium"
+                        app:backgroundTint="#F4A423"
+                        app:cornerRadius="10dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 3. Update Status Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Update Status"
+                        android:textSize="14sp"
+                        android:textColor="#1B3A5C"
+                        android:fontFamily="@font/lexend_bold"
+                        android:layout_marginBottom="14dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStatusConfirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Confirm Order"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/lexend_medium"
+                        android:layout_marginBottom="10dp"
+                        app:backgroundTint="#27AE60"
+                        app:cornerRadius="10dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStatusWashing"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Mark as Washing"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/lexend_medium"
+                        android:layout_marginBottom="10dp"
+                        app:backgroundTint="#2C8FBD"
+                        app:cornerRadius="10dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStatusReadyForClaiming"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Ready for Claiming"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/lexend_medium"
+                        android:layout_marginBottom="10dp"
+                        app:backgroundTint="#16A085"
+                        app:cornerRadius="10dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStatusOutForDelivery"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Out for Delivery"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/lexend_medium"
+                        android:layout_marginBottom="10dp"
+                        app:backgroundTint="#8E44AD"
+                        app:cornerRadius="10dp"/>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnStatusDelivered"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Mark as Claimed"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/lexend_medium"
+                        app:backgroundTint="#27AE60"
+                        app:cornerRadius="10dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 4. Payment Card (moved up) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment"
+                        android:textSize="14sp"
+                        android:textColor="#1B3A5C"
+                        android:fontFamily="@font/lexend_bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <!-- Method + Status row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="14dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Method"
+                                android:textSize="11sp"
+                                android:textColor="#888888"
+                                android:fontFamily="@font/lexend_medium"
+                                android:layout_marginBottom="2dp"/>
+
+                            <TextView
+                                android:id="@+id/tvAdminPaymentMethod"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="—"
+                                android:textSize="13sp"
+                                android:textColor="#555555"
+                                android:fontFamily="@font/lexend_medium"/>
+
+                        </LinearLayout>
+
+                        <!-- Payment status badge -->
+                        <TextView
+                            android:id="@+id/tvAdminPaymentStatus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="UNPAID"
+                            android:textSize="10sp"
+                            android:textColor="#E74C3C"
+                            android:fontFamily="@font/lexend_bold"
+                            android:background="#FDECEA"
+                            android:paddingStart="10dp"
+                            android:paddingEnd="10dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"/>
+
+                    </LinearLayout>
+
+                    <!-- Mark as Paid button -->
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnMarkAsPaid"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:text="Mark as Paid"
+                        android:textSize="13sp"
+                        android:fontFamily="@font/lexend_medium"
+                        app:backgroundTint="#27AE60"
+                        app:cornerRadius="10dp"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 5. Order Info Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Info"
+                        android:textSize="14sp"
+                        android:textColor="#1B3A5C"
+                        android:fontFamily="@font/lexend_bold"
+                        android:layout_marginBottom="14dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Service Type"
+                            android:textSize="12sp"
+                            android:textColor="#888888"
+                            android:fontFamily="@font/lexend_medium"/>
+                        <TextView
+                            android:id="@+id/tvAdminServiceType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="—"
+                            android:textSize="13sp"
+                            android:textColor="#1B3A5C"
+                            android:fontFamily="@font/lexend_bold"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Laundry Type"
+                            android:textSize="12sp"
+                            android:textColor="#888888"
+                            android:fontFamily="@font/lexend_medium"/>
+                        <TextView
+                            android:id="@+id/tvAdminLaundryType"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="—"
+                            android:textSize="13sp"
+                            android:textColor="#1B3A5C"
+                            android:fontFamily="@font/lexend_bold"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Schedule Date"
+                            android:textSize="12sp"
+                            android:textColor="#888888"
+                            android:fontFamily="@font/lexend_medium"/>
+                        <TextView
+                            android:id="@+id/tvAdminScheduleDate"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="—"
+                            android:textSize="13sp"
+                            android:textColor="#1B3A5C"
+                            android:fontFamily="@font/lexend_bold"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <!-- Claiming Method row -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Claiming Method"
+                            android:textSize="12sp"
+                            android:textColor="#888888"
+                            android:fontFamily="@font/lexend_medium"/>
+                        <TextView
+                            android:id="@+id/tvAdminClaimingMethod"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="—"
+                            android:textSize="13sp"
+                            android:textColor="#1B3A5C"
+                            android:fontFamily="@font/lexend_bold"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 6. Client Info Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Client Info"
+                        android:textSize="14sp"
+                        android:textColor="#1B3A5C"
+                        android:fontFamily="@font/lexend_bold"
+                        android:layout_marginBottom="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="6dp">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Name"
+                            android:textSize="12sp"
+                            android:textColor="#888888"
+                            android:fontFamily="@font/lexend_medium"/>
+                        <TextView
+                            android:id="@+id/tvAdminClientName"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            android:textColor="#1B3A5C"
+                            android:fontFamily="@font/lexend_bold"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Phone"
+                            android:textSize="12sp"
+                            android:textColor="#888888"
+                            android:fontFamily="@font/lexend_medium"/>
+                        <TextView
+                            android:id="@+id/tvAdminClientPhone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="12sp"
+                            android:textColor="#1B3A5C"
+                            android:fontFamily="@font/lexend_bold"
+                            android:gravity="end"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 7. Address Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="14dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Address"
+                        android:textSize="14sp"
+                        android:textColor="#1B3A5C"
+                        android:fontFamily="@font/lexend_bold"
+                        android:layout_marginBottom="14dp"/>
+
+                    <LinearLayout
+                        android:id="@+id/layoutAdminPickup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginBottom="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PICKUP"
+                            android:textSize="11sp"
+                            android:textColor="#888888"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginBottom="4dp"/>
+
+                        <TextView
+                            android:id="@+id/tvAdminPickupAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textSize="13sp"
+                            android:textColor="#1B3A5C"
+                            android:fontFamily="@font/lexend_medium"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="DELIVERY / DROP-OFF"
+                            android:textSize="11sp"
+                            android:textColor="#888888"
+                            android:fontFamily="@font/lexend_medium"
+                            android:layout_marginBottom="4dp"/>
+
+                        <TextView
+                            android:id="@+id/tvAdminDeliveryAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="—"
+                            android:textSize="13sp"
+                            android:textColor="#1B3A5C"
+                            android:fontFamily="@font/lexend_medium"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
